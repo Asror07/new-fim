@@ -1,0 +1,74 @@
+@import 'src/styles/variables.scss';
+
+.marketPlace_filter {
+   width: 100%;
+
+   border-radius: 10px;
+   background: $target_02;
+   backdrop-filter: blur(9px);
+   -webkit-backdrop-filter: blur(10px);
+   border: 1px solid $white_03;
+
+   display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   // text-align: center;
+   // justify-content: space-around;
+   padding: 0 20px 20px;
+
+   margin-bottom: 40px;
+
+   h2 {
+      margin-top: 20px;
+   }
+
+   &-filter {
+      width: 100%;
+
+      .ant-space {
+         width: 100% !important;
+
+         &-item {
+            width: 40%;
+
+            .ant-select {
+               width: 100%;
+            }
+         }
+      }
+   }
+
+   &-country {
+      text-align: start;
+      margin-top: 20px;
+      row-gap: 10px;
+
+      h3 {
+         margin-bottom: 10px;
+      }
+
+      .ant-select {
+         &-dropdown {
+            background-color: red;
+         }
+      }
+   }
+
+   &-specialty {
+      // width: calc((100% - 8px) / 3);
+      text-align: start;
+      margin-top: 20px;
+      h3 {
+         margin-bottom: 10px;
+      }
+   }
+
+   &-language {
+      text-align: start;
+      margin-top: 20px;
+
+      h3 {
+         margin-bottom: 10px;
+      }
+   }
+}

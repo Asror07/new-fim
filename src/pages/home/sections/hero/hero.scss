@@ -1,0 +1,184 @@
+.hero {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-image: url('./img/protocol1.png'), url('./img/hero-right.png'),
+      url('https://idle.finance/assets/img/bgCircles-tablet1.5742b5.svg');
+
+   background-size:
+      1000px 1100px,
+      600px 1100px,
+      836px 745px;
+   background-position:
+      left -80px top -330px,
+      right top,
+      left -90px top -200px;
+   background-repeat: no-repeat, no-repeat, no-repeat;
+   &-content {
+      width: 100%;
+      max-width: 1135px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 70px;
+      h1 {
+         text-align: center;
+         font-size: 54px;
+         line-height: 1.4;
+
+         .typist-wrapper {
+            display: flex;
+            justify-content: center;
+         }
+
+         .typist-color {
+            background: linear-gradient(73.6deg, #34edb3 2.11%, #00d1ff);
+            background-clip: text;
+            color: transparent;
+
+            span {
+               display: inline;
+            }
+         }
+      }
+
+      &-card-list {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 16px;
+      }
+   }
+   &-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 50px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(5px);
+      border: none;
+      &-investors {
+         text-align: left;
+         &-logo {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            justify-content: space-between;
+            img {
+               height: auto;
+               width: 150px;
+            }
+         }
+      }
+
+      &-stats {
+         display: flex;
+         text-align: left;
+
+         div {
+            margin-right: 20px;
+            &:last-child {
+               margin-right: 0;
+            }
+         }
+
+         .countup {
+            font-size: 25px;
+            letter-spacing: 4px;
+            font: bold;
+         }
+      }
+      .subtitle {
+         margin-bottom: 5px;
+         opacity: 0.8;
+         font-size: 16px;
+         text-align: left;
+      }
+   }
+}
+@media (max-width: 1025px) {
+   .hero {
+      padding-top: 536px;
+   }
+
+   .hero-content-card-list {
+      justify-content: center;
+   }
+}
+@media (max-width: 768px) {
+   .hero-footer-investors,
+   .hero-footer-stats {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+   }
+   .hero-footer-investors {
+      display: none;
+   }
+
+   .hero-footer-stats {
+      flex-direction: row;
+      justify-content: space-around;
+   }
+}
+
+@media (max-width: 640px) {
+   .hero-footer {
+      padding: 20px 30px;
+
+      .footer-investors {
+         .subtitle,
+         p {
+            font-size: 8px;
+         }
+      }
+
+      .footer-stats {
+         h3 {
+            letter-spacing: 2px;
+            font-size: 17px;
+         }
+         .subtitle,
+         p {
+            font-size: 8px;
+         }
+      }
+   }
+}
+
+@media (max-width: 480px) {
+   .investor-logos {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .investor-logo {
+      margin-bottom: 10px;
+      width: 40px;
+   }
+
+   img {
+      margin-bottom: 10px;
+      width: 40px;
+   }
+
+   h1 {
+      justify-content: center;
+      font-size: 46px;
+
+      .typist-wrapper {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   .hero-footer {
+      .footer-investors {
+         display: none;
+      }
+   }
+}

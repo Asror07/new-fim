@@ -1,0 +1,28 @@
+.signup_form {
+   color: rgba(255, 255, 255, 0.8);
+
+   &-box {
+      display: flex;
+      width: 100%;
+   }
+
+   &-icons_group {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      div {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         border: 2px solid rgba(255, 255, 255, 0.5);
+         padding: 5px 8px;
+         cursor: pointer;
+         border-radius: 5px;
+         overflow: hidden;
+
+         backdrop-filter: blur(20px);
+      }
+   }
+}

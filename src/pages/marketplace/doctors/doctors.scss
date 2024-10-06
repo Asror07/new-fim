@@ -1,0 +1,8 @@
+@import 'src/styles/variables.scss';
+
+.doctors {
+   display: flex;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   column-gap: 8px;
+}

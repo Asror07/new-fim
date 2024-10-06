@@ -1,0 +1,130 @@
+@import './variables.scss';
+
+.ant-btn-icon {
+   height: 24px;
+}
+
+// Form
+.ant-form-item {
+   margin-bottom: 16px;
+   &-explain {
+      &-error {
+         text-align: start;
+      }
+   }
+   &-label {
+      padding-bottom: 4px !important;
+      label {
+         font-weight: 400;
+         color: rgba(255, 255, 255, 0.8) !important;
+      }
+   }
+}
+
+// BreadCrumb
+.ant-breadcrumb {
+   &-link {
+      &:last-child {
+         color: $primary !important;
+      }
+   }
+}
+
+// Tabs
+.ant-tabs {
+   &-tab {
+      &-btn {
+         font-weight: 700;
+      }
+   }
+   &-ink-bar {
+      height: 4px !important;
+      border-radius: 50px !important;
+   }
+}
+
+// // Checkbox
+.ant-checkbox {
+   &-wrapper {
+      span {
+         &:last-child {
+            font-weight: 400;
+            padding-inline-start: 12px !important;
+            font-size: 14px;
+         }
+      }
+   }
+}
+
+// Modal
+.ant-modal {
+   &-content {
+      border-radius: 24px !important;
+      padding: 24px 30px !important;
+   }
+   &-close {
+      svg {
+         // color: $text-primary;
+         color: #7c9faf;
+         width: 16px;
+         height: 16px;
+         stroke-width: 2px;
+         path {
+            stroke-width: 2px;
+         }
+      }
+   }
+}
+
+// Divider
+
+.ant-divider-horizontal {
+   &::after {
+      border-color: rgba(255, 255, 255, 0.8) !important;
+   }
+   &::before {
+      border-color: rgba(255, 255, 255, 0.8) !important;
+   }
+}
+
+// Input
+.ant-input {
+   &-outlined {
+      background-color: $white_02 !important;
+   }
+}
+
+// Select
+.ant-select {
+   &-dropdown {
+      backdrop-filter: blur(15px);
+   }
+   &-arrow {
+      color: $white_08 !important;
+   }
+}
+
+// Picker
+
+.ant-picker {
+   &-suffix {
+      color: $white_09 !important;
+   }
+   &-clear {
+      svg {
+         fill: $white_03;
+         &:hover {
+            fill: $white_09;
+         }
+      }
+   }
+   &-outlined {
+      background-color: $white_02 !important;
+      width: 100%;
+   }
+   &-panel-layout {
+      backdrop-filter: blur(15px) !important;
+   }
+   &-dropdown {
+   }
+}

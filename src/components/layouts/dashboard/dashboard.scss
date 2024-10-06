@@ -1,0 +1,34 @@
+@import 'src/styles/variables.scss';
+
+.layout_dash {
+   display: flex;
+   @include flex-center;
+   flex-direction: column;
+   background:
+      linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.8) 100%),
+      url('/public/bgnew.webp') center no-repeat;
+   background-size: cover;
+   background-color: none !important;
+   height: 100vh;
+
+   // background-image: linear-gradient(180deg, $primary 0%, #94f5e2 100%);
+
+   &-right {
+      display: flex;
+
+      width: 100%;
+   }
+}
+
+.containerDash {
+   display: flex;
+   flex-direction: column;
+   width: 1400px;
+   gap: 24px;
+}
+
+@media (max-width: 1400px) {
+   .containerDash {
+      margin: 0 24px;
+   }
+}

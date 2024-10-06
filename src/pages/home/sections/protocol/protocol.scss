@@ -1,0 +1,162 @@
+.protocol {
+   text-align: center;
+   min-height: 100vh;
+   padding: 20px;
+   padding-top: 100px;
+   background-image: url('./img/protocol1.png'), url('./img/protocol2.png');
+   background-size:
+      824px 1000px,
+      806px 900px;
+   background-position:
+      left top 90px,
+      right center;
+   background-repeat: no-repeat, no-repeat;
+   text-align: center;
+   &-container {
+      max-width: 850px;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      &-title {
+         font-size: 34px;
+         margin-bottom: 60px;
+      }
+      &-list {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+         .protocol-container-list {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            &-item {
+               .ant-tabs-nav {
+                  .ant-tabs-tab {
+                     padding: 10px 20px;
+                     color: #b9b9b994;
+                     border-radius: 50px;
+                     transition: all 0.3s ease;
+                     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                     .ant-tabs-ink-bar {
+                        display: none;
+                     }
+                     &:hover {
+                        color: #000;
+                        background-color: #ffffff;
+                     }
+                  }
+                  .ant-tabs-tab-active {
+                     background-color: white;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.protocol-list-group {
+   color: grey;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+   padding: 5px 30px;
+   border-radius: 50px;
+   transition: background-color 0.3s ease;
+   background-color: inherit;
+   border: none;
+   margin-bottom: 50px;
+}
+
+.protocol-list-group.active {
+   background-color: #fff;
+   border-radius: 50px;
+}
+
+.cards-container {
+   gap: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.card {
+   cursor: pointer;
+   background: rgba(255, 255, 255, 0.22);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   max-width: 200px;
+   width: 100%;
+   padding: 30px;
+   border-radius: 8px;
+}
+
+.card:hover {
+   opacity: 0.5;
+   transition: 0.3s ease;
+}
+
+img {
+   width: auto;
+   height: 28px;
+}
+
+@media (max-width: 480px) {
+   .protocol {
+      padding: 0;
+
+      .container {
+         padding: 0;
+      }
+   }
+
+   .protocol-list {
+      overflow-x: auto;
+
+      &-group {
+         flex-shrink: 0;
+         min-width: 120px;
+         font: bold;
+         padding: 8px 12px;
+         margin-right: 10px;
+         font-size: 20px;
+      }
+   }
+}
+.protocol-container-list-item {
+   border-radius: 50px;
+   padding-bottom: 60px;
+   .ant-tabs-nav {
+      margin-bottom: 0;
+      border-bottom: none !important;
+   }
+   .ant-tabs-ink-bar {
+      display: none;
+   }
+   .ant-tabs-tab {
+      background-color: transparent;
+
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+      &:hover {
+         background-color: #f0f0f0;
+      }
+   }
+   .ant-tabs-tab-active {
+      color: #ffffff;
+      background-color: white;
+      color: #000;
+      border-radius: 50px;
+   }
+   .ant-tabs-content-holder {
+      display: none;
+   }
+}
+
+
