@@ -1,7 +1,8 @@
-import { ArrowRight, Sms, Location } from 'iconsax-react';
-import './card.scss';
+import { ArrowRight, Location } from 'iconsax-react';
 import { Link } from 'react-router-dom';
-import { InSvg } from 'src/assets/svg';
+import './card.scss';
+
+import CardImg from '/public/background.webp';
 
 export default function DoctorsCard() {
    return (
@@ -11,7 +12,7 @@ export default function DoctorsCard() {
                <div className="doctors_cards-card-header-img">
                   <img src="/public/background.webp" alt="Doctor" />
                </div>
-               <div className="doctors_cards-card-header-info">
+               <div className={CardImg}>
                   <h3>Dr. Ahmed Ali</h3>
                   <p>Dentist</p>
                </div>
