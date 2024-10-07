@@ -26,87 +26,60 @@
          justify-content: center;
          align-items: center;
          gap: 20px;
-         .protocol-container-list {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            &-item {
-               .ant-tabs-nav {
-                  .ant-tabs-tab {
-                     padding: 10px 20px;
-                     color: #b9b9b994;
-                     border-radius: 50px;
-                     transition: all 0.3s ease;
-                     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-                     .ant-tabs-ink-bar {
-                        display: none;
-                     }
-                     &:hover {
-                        color: #000;
-                        background-color: #ffffff;
-                     }
+         padding: 20px;
+         &-item {
+            .ant-tabs-nav {
+               .ant-tabs-tab {
+                  padding: 10px 20px;
+                  color: #b9b9b994;
+                  border-radius: 50px;
+                  transition: all 0.3s ease;
+                  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+                  .ant-tabs-ink-bar {
+                     display: none;
                   }
-                  .ant-tabs-tab-active {
-                     background-color: white;
+                  &:hover {
+                     color: #000;
+                     background-color: #ffffff;
                   }
+               }
+               .ant-tabs-tab-active {
+                  background-color: white;
                }
             }
          }
       }
+      &-cards {
+         gap: 20px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         .card {
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.22);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 200px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 8px;
+         }
+
+         .card:hover {
+            opacity: 0.5;
+            transition: 0.3s ease;
+         }
+
+         img {
+            width: auto;
+            height: 28px;
+         }
+      }
    }
 }
-
-.protocol-list-group {
-   color: grey;
-   cursor: pointer;
-   display: flex;
-   justify-content: center;
-   margin-bottom: 20px;
-   padding: 5px 30px;
-   border-radius: 50px;
-   transition: background-color 0.3s ease;
-   background-color: inherit;
-   border: none;
-   margin-bottom: 50px;
-}
-
-.protocol-list-group.active {
-   background-color: #fff;
-   border-radius: 50px;
-}
-
-.cards-container {
-   gap: 20px;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-}
-
-.card {
-   cursor: pointer;
-   background: rgba(255, 255, 255, 0.22);
-   border-radius: 16px;
-   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-   backdrop-filter: blur(5px);
-   -webkit-backdrop-filter: blur(5px);
-   border: 1px solid rgba(255, 255, 255, 0.3);
-   max-width: 200px;
-   width: 100%;
-   padding: 30px;
-   border-radius: 8px;
-}
-
-.card:hover {
-   opacity: 0.5;
-   transition: 0.3s ease;
-}
-
-img {
-   width: auto;
-   height: 28px;
-}
-
 @media (max-width: 480px) {
    .protocol {
       padding: 0;
@@ -158,5 +131,3 @@ img {
       display: none;
    }
 }
-
-

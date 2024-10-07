@@ -1,9 +1,9 @@
-import './PlayerSection.scss';
+import './player.scss';
 const PlayerSection = () => {
    return (
-      <section className="player-section fade-up">
+      <section className="player fade-up">
          <div className="container">
-            <div className="points">
+            <div className="player-points">
                {' '}
                <div className="point point-text">
                   <h2 className="point-text-title">Ready to partner up?</h2>

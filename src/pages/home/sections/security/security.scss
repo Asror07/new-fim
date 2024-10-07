@@ -1,7 +1,6 @@
 .security {
    background-image: url('./img/secure.png'),
       url('https://idle.finance/assets/img/bgCircles-desktop3.d6ea7a.svg');
-
    background-size:
       1300px 1000px,
       1440px 2000px;
@@ -9,6 +8,7 @@
    background-repeat: no-repeat, no-repeat;
    text-align: center;
    padding-bottom: 120px;
+
    &-container {
       max-width: 1110px;
       width: 100%;
@@ -16,24 +16,25 @@
       margin-left: auto;
       padding-left: 20px;
       padding-right: 20px;
+
       .text-block {
          margin-bottom: 70px;
-
          h3 {
             margin: 0 0 15px;
             font-size: 34px;
          }
-
          p {
             font-size: 13px;
          }
       }
+
       .card-block {
          text-align: left;
          display: grid;
          grid-template-columns: 1fr 1fr;
          justify-content: center;
          gap: 20px;
+
          .card-left {
             background-color: #17202e;
             padding: 60px 50px;
@@ -47,11 +48,9 @@
                   margin-bottom: 25px;
                   letter-spacing: 2px;
                }
-
                p {
                   font-size: 15px;
                }
-
                margin-bottom: 50px;
             }
 
@@ -73,10 +72,10 @@
                      display: flex;
                      align-items: center;
                      gap: 20px;
-                     background-color: rgb(32, 42, 62, 0.2);
+                     background-color: rgba(32, 42, 62, 0.2);
                      justify-content: space-between;
+
                      &-text {
-                        
                         display: flex;
                         align-items: center;
                         gap: 20px;
@@ -88,6 +87,7 @@
                }
             }
          }
+
          .card-right {
             background-color: #17202e;
             padding: 60px 50px;
@@ -103,8 +103,9 @@
 
             &-logo {
                border-radius: 12px;
-               width: 440px;
-               height: 230px;
+               width: 100%; // Ensuring the image is responsive
+               max-width: 440px; // Maintain a max width
+               height: auto; // Maintain the aspect ratio
                margin-bottom: 12px;
             }
 
@@ -113,7 +114,6 @@
                letter-spacing: -1%;
                font-size: 22px;
                line-height: 1.5;
-               margin-bottom: 31px;
             }
 
             .button {
@@ -133,64 +133,115 @@
 }
 
 @media (max-width: 1025px) {
-   .container {
-      max-width: 900px;
-      width: 100%;
-   }
    .security-container {
+      max-width: 900px;
       padding-left: 70px;
       padding-right: 70px;
+
       .card-block {
-         width: auto;
-         display: grid;
          grid-template-columns: 1fr;
-         .card-left,
-         .card-right {
-            text-align: center;
-         }
+         text-align: center;
       }
    }
 }
 
 @media (max-width: 665px) {
-   .text-block {
-      margin-bottom: 70px;
+   .security-container {
+      padding-left: 20px;
+      padding-right: 20px;
 
-      h3 {
-         font-size: 34px;
+      .text-block {
+         text-align: center; // Center the text
+         margin-bottom: 50px;
+
+         h3 {
+            font-size: 28px;
+         }
+
+         p {
+            font-size: 12px;
+         }
       }
 
-      p {
-         font-size: 11px;
+      .card-block {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         padding: 35px;
+         width: 100%;
+      }
+
+      .card-left,
+      .card-right {
+         padding: 40px 30px;
+         h2 {
+            font-size: 36px;
+         }
+         p {
+            font-size: 13px;
+         }
+
+         &-logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+         }
       }
    }
 }
 
 @media (max-width: 480px) {
    .security-container {
-      max-width: 465px;
-      .card-block {
-         width: 330px;
-         display: flex;
-         flex-direction: column;
-         gap: 20px;
-         padding: 35px;
+      max-width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      .text-block {
+         text-align: center; // Center the text
+         margin-bottom: 50px;
+         h3 {
+            font-size: 34px;
+            font-weight: bold;
+         }
+
+         p {
+            font-size: 12px;
+         }
       }
       .text-block {
          text-align: left;
-         margin-bottom: 70px;
+         margin-bottom: 40px;
 
          h3 {
-            font-size: 34px;
+            font-size: 24px;
          }
 
          p {
             font-size: 11px;
          }
       }
+
+      .card-block {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 100%;
+         padding: 20px;
+      }
+
+      .card-left,
+      .card-right {
+         h2 {
+            font-size: 32px; // Adjusted title font size
+         }
+         p {
+            font-size: 12px; // Smaller text size for compact layout
+         }
+
+         &-logo {
+            width: 100%; // Full width of the container
+            max-width: 280px; // Limit the max width for very small screens
+            height: auto; // Maintain aspect ratio
+         }
+      }
    }
 }
-
-// https://idle.finance/assets/img/Ellipse4.b4c1ed.png
-//
-// https://idle.finance/assets/img/bgCircles-tablet3.54707b.svg

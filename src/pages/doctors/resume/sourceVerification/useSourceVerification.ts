@@ -1,4 +1,4 @@
-import { message } from 'antd';
+import { Form, message } from 'antd';
 
 const formItems = [
    {
@@ -10,5 +10,7 @@ const formItems = [
 ];
 
 export default function SourceVerification() {
-   return <div>SourceVerification</div>;
+   const [form] = Form.useForm();
+
+   return { form, formItems };
 }

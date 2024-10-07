@@ -13,15 +13,12 @@ function CustomTabs({ fontSize = 20, gap = 50, ...rest }: Props) {
       <ConfigProvider
          theme={{
             token: {
-               colorPrimary: colors.textPrimary,
                colorPrimaryBorder: 'red',
                lineWidth: 0,
             },
             components: {
                Tabs: {
                   fontSize,
-                  colorText: colors.gray5,
-                  inkBarColor: colors.blue,
                   horizontalItemGutter: gap,
                },
             },

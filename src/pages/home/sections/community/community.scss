@@ -5,7 +5,7 @@
       600px 900px,
       420px 1200px;
    background-position:
-      left  top ,
+      left top,
       right top;
    background-repeat: no-repeat, no-repeat;
    &-container {
@@ -69,9 +69,7 @@
       }
    }
    .values-block {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      margin: 0 98px 80px;
       .value {
          h2 {
             font-size: 53px;
@@ -111,19 +109,22 @@
 @media (max-width: 646px) {
    .community-container-top {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
+   }
+   .values-block {
+      text-align: center;
+      margin: 0 37px 46px !important;
       .value {
          margin-bottom: 43px;
          h2 {
-            font-size: 38px;
+            font-size: 25px;
             margin-bottom: 20px;
          }
 
          p {
-            font-size: 11px;
+            font-size: 7px;
             opacity: 0.8;
          }
       }
@@ -147,12 +148,12 @@
       .value {
          margin-bottom: 43px;
          h2 {
-            font-size: 38px;
-            margin-bottom: 20px;
+            font-size: 53px;
+            margin-bottom: 10px;
          }
 
          p {
-            font-size: 11px;
+            font-size: 15px;
             opacity: 0.8;
          }
       }

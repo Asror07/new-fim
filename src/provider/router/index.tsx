@@ -1,9 +1,10 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 
 // Layouts
-import AuthLayout from 'src/components/layouts/auth';
 import { MainLayout } from 'src/components/layouts';
+import AuthLayout from 'src/components/layouts/auth';
 // Pages
+import Dashboard from 'src/components/layouts/dashboard';
 import {
    Custom404Page,
    EditProfilePage,
@@ -11,12 +12,11 @@ import {
    HomePage,
    ProfilePage,
 } from 'src/pages';
-import SignUp from 'src/pages/auth/signup';
 import Signin from 'src/pages/auth/signin';
-import Dashboard from 'src/components/layouts/dashboard';
-import MarketPlace from 'src/pages/marketplace';
-import DoctorsSection from 'src/pages/marketplace/doctors';
+import SignUp from 'src/pages/auth/signup';
 import MyResume from 'src/pages/doctors/resume';
+import MarketPlace from 'src/pages/marketplace';
+import PatientPage from 'src/pages/patient';
 
 function RouterProvider() {
    return (
@@ -47,6 +47,8 @@ function RouterProvider() {
             {/* Doctors */}
             <Route path="/doctors/my-resume" element={<MyResume />}></Route>
 
+            {/* Patient */}
+            <Route path="/patient" element={<PatientPage />}></Route>
             {/* 404 */}
             <Route path="*" element={<Custom404Page />} />
          </Routes>

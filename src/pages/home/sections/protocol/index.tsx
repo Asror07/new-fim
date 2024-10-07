@@ -1,13 +1,18 @@
 import { Tabs, Modal } from 'antd';
 import { useState } from 'react';
 import './protocol.scss';
+import { TabsProps } from 'antd/lib';
+import { CustomTabs } from 'src/components/common';
 
 type CardGroupKey = 'doctors' | 'hospitals' | 'patients';
 
 const HomeProtocolSection = () => {
    const [activeGroup, setActiveGroup] = useState<CardGroupKey>('doctors');
    const [isModalOpen, setIsModalOpen] = useState(false);
-   const [selectedCard, setSelectedCard] = useState<{ title: string; content: string } | null>(null);
+   const [selectedCard, setSelectedCard] = useState<{
+      title: string;
+      content: string;
+   } | null>(null);
 
    const onChange = (key: string) => {
       if (key === '1') {
@@ -18,6 +23,11 @@ const HomeProtocolSection = () => {
          setActiveGroup('patients');
       }
    };
+   const tabItems: TabsProps['items'] = [
+      { label: 'Doctors', key: '1' },
+      { label: 'Hospitals', key: '2' },
+      { label: 'Patients', key: '3' },
+   ];
 
    const showModal = (card: { title: string; content: string }) => {
       setSelectedCard(card);
@@ -32,31 +42,33 @@ const HomeProtocolSection = () => {
    return (
       <section className="protocol">
          <div className="protocol-container">
-            <h3 className="protocol-container-title">Connecting Across Borders</h3>
+            <h3 className="protocol-container-title">
+               Connecting Across Borders
+            </h3>
             <div className="protocol-container-list">
-               <Tabs
-                  className="protocol-container-list-item"
+               <CustomTabs
+                  fontSize={24}
                   defaultActiveKey="1"
+                  items={tabItems}
                   centered
+                  gap={30}
+                  className="protocol-container-list-item"
                   onChange={onChange}
-                  items={[
-                     { label: 'Doctors', key: '1' },
-                     { label: 'Hospitals', key: '2' },
-                     { label: 'Patients', key: '3' },
-                  ]}
                />
             </div>
-            <div className="cards-container">{renderCards(activeGroup, showModal)}</div>
+            <div className="protocol-container-cards">
+               {renderCards(activeGroup, showModal)}
+            </div>
 
             {/* Modal to display card content */}
-            <Modal
+            {/* <Modal
                title={selectedCard?.title}
                visible={isModalOpen}
                onCancel={handleModalClose}
                footer={null}
             >
                <p>{selectedCard?.content}</p>
-            </Modal>
+            </Modal> */}
          </div>
       </section>
    );
@@ -64,7 +76,10 @@ const HomeProtocolSection = () => {
 
 export default HomeProtocolSection;
 
-const renderCards = (group: CardGroupKey, showModal: (card: { title: string; content: string }) => void) => {
+const renderCards = (
+   group: CardGroupKey,
+   showModal: (card: { title: string; content: string }) => void
+) => {
    return cardGroups[group].map((card, index) => (
       <div className="card" key={index} onClick={() => showModal(card)}>
          <a className="card-logo" target="_blank" rel="noopener noreferrer">
@@ -126,7 +141,8 @@ const cardGroups: Record<CardGroupKey, { title: string; content: string }[]> = {
       },
       {
          title: 'Global Expertise',
-         content: 'Access the best medical professionals from across the globe.',
+         content:
+            'Access the best medical professionals from across the globe.',
       },
       {
          title: 'Informed Decisions',

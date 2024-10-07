@@ -1,15 +1,7 @@
+import { Select, SelectProps, Space } from 'antd';
 import { useState } from 'react';
-import CustomAutoComplete from 'src/components/common/autoComplite';
-import CustomInput from 'src/components/common/input';
-import './filter.scss';
-import {
-   AutoComplete,
-   ConfigProviderProps,
-   Select,
-   SelectProps,
-   Space,
-} from 'antd';
 import { useTypedSelector } from 'src/app/store';
+import './filter.scss';
 
 // List of countries
 const countries: string[] = [
@@ -58,6 +50,7 @@ const languages: string[] = [
    'Korean',
    'Russian',
    'Chinese',
+   'Uzbek',
 ];
 const optionsLanguage: SelectProps['options'] = [];
 
@@ -169,11 +162,13 @@ function FilterMarketPlaceSecsion() {
    return (
       <div className="marketPlace_filter">
          <div className="marketPlace_filter-filter">
-            <Space wrap>
+            <Space direction="vertical" wrap>
+               <h3>Specialty</h3>
                <Select
-                  mode="multiple"
+                  allowClear
+                  // mode="multiple"
                   defaultValue={provinceData[0]}
-                  // style={{ width:  }}
+                  style={{ width: 250 }}
                   onChange={handleProvinceChange}
                   options={provinceData.map((province) => ({
                      label: province,
@@ -181,16 +176,15 @@ function FilterMarketPlaceSecsion() {
                   }))}
                />
                <Select
-                  mode="multiple"
-                  style={{ width: 200 }}
+                  // mode="multiple"
+                  style={{ width: 250 }}
                   value={secondCity}
                   onChange={onSecondCityChange}
                   options={cities.map((city) => ({ label: city, value: city }))}
                />
             </Space>
             <div className="marketPlace_filter-specialty">
-               <h3>Specialty</h3>
-               <Space direction="vertical" style={{ width: '100%' }}>
+               {/* <Space direction="vertical" style={{ width: '100%' }}>
                   <Select
                      mode="tags"
                      placeholder="Please select"
@@ -199,7 +193,7 @@ function FilterMarketPlaceSecsion() {
                      style={{ width: 200 }}
                      options={optionsSpecialty}
                   />
-               </Space>
+               </Space> */}
             </div>
          </div>
          <div className="marketPlace_filter-country">
@@ -211,8 +205,8 @@ function FilterMarketPlaceSecsion() {
                   placeholder="Please select"
                   defaultValue={['Usa']}
                   onChange={handleChange}
-                  style={{ width: 200 }}
-                  options={optionsLanguage}
+                  style={{ width: 250 }}
+                  options={optionsCountry}
                />
             </Space>
          </div>
@@ -225,7 +219,7 @@ function FilterMarketPlaceSecsion() {
                   placeholder="Please select"
                   defaultValue={['English']}
                   onChange={handleChange}
-                  style={{ width: 200 }}
+                  style={{ width: 250 }}
                   options={optionsLanguage}
                />
             </Space>

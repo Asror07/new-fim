@@ -12,6 +12,7 @@ import { MaskedInputProps } from 'antd-mask-input/build/main/lib/MaskedInput';
 import { OTPProps } from 'antd/es/input/OTP';
 import { baseFormItemCol } from 'src/constants/form';
 import '../form_item.scss';
+import FileUploadFormItem from './FileUpload';
 
 type CombinedType = FormItemProps &
    InputProps &
@@ -27,6 +28,7 @@ export interface InputFormItemProps extends CombinedType {
    col?: number;
    message?: string;
    row?: number;
+   isFile?: boolean;
 }
 
 function InputFormItem({
@@ -41,6 +43,7 @@ function InputFormItem({
    row = 2,
    options,
    datePicker,
+   isFile,
    ...rest
 }: InputFormItemProps) {
    return (
@@ -60,6 +63,8 @@ function InputFormItem({
                <Input.TextArea rows={row} placeholder={rest.placeholder} />
             ) : datePicker ? (
                <DatePicker />
+            ) : isFile ? (
+               <FileUploadFormItem />
             ) : mask ? (
                <MaskedInput
                   mask={mask}

@@ -47,11 +47,8 @@ function AntdProvider({ children }: PropsWithChildren) {
                   fontSize: 15,
                   optionPadding: '12px 18px',
                   colorBgContainer: themeColors.dark.white_02,
-                  colorBgElevated: themeColors.dark.white_02,
-
-                  colorTextDescription: themeColors.dark.white_08,
-                  colorSplit: themeColors.dark.white_02,
-                  // colorBgElevated: themeColors.dark.black_05,
+                  // colorBgElevated: themeColors.dark.white_02,
+                  colorBgElevated: themeColors.dark.black_05,
                   optionSelectedBg: themeColors.dark.primary,
 
                   colorText: themeColors.dark.white,
@@ -72,6 +69,7 @@ function AntdProvider({ children }: PropsWithChildren) {
                   colorSplit: themeColors.dark.white_05,
                   colorTextDisabled: themeColors.dark.white_05,
                },
+               Upload: {},
             },
          }}
       >

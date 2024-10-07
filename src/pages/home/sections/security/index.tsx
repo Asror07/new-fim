@@ -79,17 +79,17 @@ export default SecuritySection;
 const auditData = [
    {
       dateRange: 'December 2019 - April 2021',
-      title: 'Protocol audit',
+      title: 'Doctors',
       company: 'by Quantstamp',
    },
    {
       dateRange: 'November 2020',
-      title: 'Governance audit',
+      title: 'Hospitals',
       company: 'by Quantstamp',
    },
    {
       dateRange: 'December 2021',
-      title: 'Tranches audit',
+      title: 'Patients',
       company: 'by Quanstamp',
    },
 ];

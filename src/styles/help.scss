@@ -128,3 +128,16 @@
    &-dropdown {
    }
 }
+
+// Upload
+
+.ant-upload {
+   .ant-btn {
+      width: 100%;
+   }
+   &-select {
+      width: 100% !important;
+   }
+   &-wrapper {
+   }
+}
